@@ -1,0 +1,129 @@
+$color-background: #fceff9;
+$color-dark-1: black;
+
+@mixin translate {
+  transform: translateY(2px);
+}
+@mixin links {
+  a:link,
+  a:before,
+  a:visited {
+    text-decoration: none;
+  }
+}
+
+@keyframes scale-down-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-17rem);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+@keyframes scale-down-2 {
+  0% {
+    opacity: 0;
+
+    transform: translateY(-19rem);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+@keyframes scale-down-3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-21rem);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop-ext-large {
+    @media only screen and (max-width: 90em) {
+      @content;
+    }
+  } @else if $breakpoint == desktop-ex-large {
+    @media only screen and (max-width: 89em) {
+      @content;
+    }
+  } @else if $breakpoint == desktop-large {
+    @media only screen and(max-width: 86em) {
+      @content;
+    }
+  } @else if $breakpoint == desktop-medium {
+    @media only screen and (max-width: 84em) {
+      @content;
+    }
+  } @else if $breakpoint == desktop-small {
+    @media only screen and (max-width: 82.81em) {
+      @content;
+    }
+  }
+}
+/////Initial Settings
+* {
+  padding: 0;
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  color: inherit;
+}
+html {
+  box-sizing: border-box;
+  @media only screen and (max-width: 71.56em) {
+    font-size: 60%;
+  }
+  @media only screen and (max-width: 55em) {
+    font-size: 55%;
+  }
+  @media only screen and (max-width: 51.7em) {
+    font-size: 52%;
+  }
+  @media only screen and (max-width: 52.8em) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: 44.375em) {
+    font-size: 48%;
+  }
+  @media only screen and (max-width: 39.0625em) {
+    font-size: 46%;
+  }
+  font-size: 62.5%;
+}
+body {
+  background-color: $color-background;
+  line-height: 1.6;
+  width: 100%;
+  height: 100%;
+  padding: 10rem 10rem;
+  @media only screen and (max-width: 71.56em) {
+    padding: 15rem 10rem;
+  }
+  @media only screen and (max-width: 67.82em) {
+    padding: 5rem 5rem;
+  }
+  @media only screen and (max-width: 63.125em) {
+    padding: 10rem 0;
+  }
+  @media only screen and (max-width: 26.5625em) {
+    padding: 15rem 2rem;
+  }
+  color: $color-dark-1;
+  font-family: "Inter", sans-serif;
+}

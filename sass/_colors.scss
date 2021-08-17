@@ -1,0 +1,6 @@
+$color-primary: #f7f7f7;
+$color-light-orange: #e7740fad;
+@include respond(desktop-small) {
+  $color-light-orange: #f77808e0;
+}
+$color-green: #4ba02e98;
