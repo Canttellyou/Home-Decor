@@ -122,7 +122,8 @@ body {
     padding: 10rem 0;
   }
   @media only screen and (max-width: 26.5625em) {
-    padding: 15rem 2rem;
+    padding: 0 0;
+    background-color: #f7f7f7;
   }
   color: $color-dark-1;
   font-family: "Inter", sans-serif;
